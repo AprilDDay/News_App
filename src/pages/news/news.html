@@ -1,0 +1,25 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>news</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let news of myNews">
+      <ion-img width="200" height="100" src="{{ news.urlToImage }}"></ion-img>
+      <!--<ion-img width="200" height="100" src="https://img.rasset.ie/0013427b-1600.jpg"></ion-img>-->
+      <p [style.font-size]="myTitleSize"><a href="{{ news.url }}">{{ news.title }}</a></p>
+     <p [style.font-size]="myDescription">{{ news.description }}</p>
+     <!--<p>{{ news.description }}</p>-->
+    </ion-item>
+  </ion-list>
+
+</ion-content>
